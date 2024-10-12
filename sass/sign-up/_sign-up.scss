@@ -1,0 +1,92 @@
+@charset "utf-8";
+@use "../base/mixins" as *;
+
+/** @section Sign-up */
+.sign-up {
+    font-size: var(--sign-up-text-size);
+    color: var(--secondary);
+    background: var(--secondary-background);
+    padding: var(--sign-up-padding);
+    > p {
+        margin-block: 2.4rem;
+    }
+    li {
+        display: flex;
+        gap: 1.6rem;
+        list-style: none;
+        &::before {
+            background: url("images/icons-sprite.svg") no-repeat;
+            display: block;
+            flex-shrink: 0;
+            align-self: flex-start;
+            width: 21px;
+            aspect-ratio: 1;
+            content: "";
+        }
+        &:not(:first-child) {
+            margin-block-start: 1rem;
+        }
+    }
+    form {
+        margin-block-start: 4rem;
+        p {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--sign-up-form-gap);
+            &:not(:first-child) {
+                margin-block-start: 2.4rem;
+            }
+        }
+    }
+    input {
+        flex: 1;
+        &:focus {
+            outline: none;
+        }
+        &[type="email"] {
+            color: inherit;
+            padding: var(--sign-up-field-padding);
+            box-sizing: border-box;
+            min-block-size: var(--sign-up-field-block-size);
+            border-color: var(--quaternary-background);
+            border-radius: var(--sign-up-field-radius);
+            transition: border-color 300ms ease-in;
+            &::placeholder {
+                opacity: .5;
+            }
+            &:focus {
+                border-color: var(--quaternary-background-hover);
+            }
+            &:invalid {
+                color: var(--tertiary);
+                background: var(--senary-background);
+                border-color: var(--quinary-background);
+            }
+        }
+    }
+    label,
+    .invalidation-message {
+        font-size: var(--sign-up-form-label-size);
+        font-weight: bold;
+        inline-size: calc(50% - var(--sign-up-form-gap) / 2);
+    }
+    label {
+        &:has(+ :not(.invalidation-message)) {
+            flex-basis: 100%;
+        }
+    }
+    .title {
+        font-size: var(--sign-up-title-size);
+        line-height: var(--sign-up-title-line-height);
+    }
+    .invalidation-message {
+        color: var(--tertiary);
+        text-align: end;
+    }
+    @include css-media-queries($from-breakpoint: standalone-confirmation-card) {
+        --sign-up-title-size: 5.6rem;
+    }
+    @include css-media-queries($from-breakpoint: two-column-card) {
+        --sign-up-padding: 2.4rem;
+    }
+}

@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+/** @section Sign-up buttons */
+.sign-up {
+    input[type="submit"],
+    a {
+        font-weight: bold;
+        color: var(--primary);
+        background: var(--tertiary-background);
+        text-align: center;
+        box-sizing: border-box;
+        min-block-size: var(--sign-up-button-block-size);
+        padding: var(--sign-up-button-padding);
+        border-radius: var(--sign-up-button-radius);
+        transition: box-shadow 75ms ease-in;
+        &:hover,
+        &:focus {
+            background: var(--tertiary-background-hover);
+            box-shadow: var(--sign-up-button-shadow);
+        }
+    }
+    input[type="submit"] {
+        border: none;
+    }
+    a {
+        text-decoration: none;
+        display: block;
+        &:focus {
+            outline: none;
+        }
+    }
+}

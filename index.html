@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+        <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+        <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    </head>
+    <body>
+
+        <main>
+
+            <!-- Begin sign-up -->
+            <section class="sign-up subscription">
+                <h1 class="title">Stay updated!</h1>
+                <picture>
+                    <source
+                        srcset="./assets/images/illustration-sign-up-desktop.svg"
+                        width="400"
+                        height="593"
+                        media="(min-width: 800px)"
+                    >
+                    <img src="./assets/images/illustration-sign-up-mobile.svg" alt="" width="375" height="284">
+                </picture>
+                <p>Join 60,000+ product managers receiving monthly updates on:</p>
+                <ul>
+                    <li>Product discovery and building what matters</li>
+                    <li>Measuring to ensure updates are a success</li>
+                    <li>And much more!</li>
+                </ul>
+                <form method="post" novalidate>
+                    <p>
+                        <label for="e-mail">Email address</label>
+                        <span id="e-mail-invalidation-message" class="invalidation-message" aria-live="assertive">Valid e-mail required</span>
+                        <input id="e-mail" name="e-mail" type="email" placeholder="email@company.com" aria-required="true" aria-invalid="true" aria-describedby="e-mail-invalidation-message">
+                    </p>
+                    <p>
+                        <input type="submit" value="Subscribe to monthly newsletter">
+                    </p>
+                </form>
+            </section>
+            <!-- End sign-up -->
+
+            <!-- Begin confirmation -->
+            <section class="sign-up confirmation">
+                <h1 class="title">Thanks for subscribing!</h1>
+                <p>A confirmation email has been sent to <strong>ash@loremcompany.com</strong>. Please open it and click the button inside to confirm your subscription.</p>
+                <p><a href="./">Dismiss message</a></p>
+            </section>
+            <!-- End confirmation -->
+
+        </main>
+
+        <footer class="attribution">
+            <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/webdevbynight">@webdevbynight</a>.</p>
+        </footer>
+
+        <script src="./js/index.js" type="module"></script>
+
+    </body>
+</html>

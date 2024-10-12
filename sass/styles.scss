@@ -1,0 +1,27 @@
+@charset "utf-8";
+@use "sass:list";
+
+/**
+ * @site Newsletter sign-up form with success message
+ * @author Victor Brito
+ */
+
+// Browser configuration
+@use "./base/config" as *;
+
+@use "./base/mixins" with (
+    $media-queries-breakpoints: (
+        standalone-confirmation-card: 504,
+        two-column-card: 800,
+        standalone-subscription-card: 928
+    )
+);
+@use "./variables";
+@use "./base/reset";
+@use "./base/print";
+@use "./typo/font-face";
+@use "./layout/layout";
+@use "./sign-up/sign-up";
+@use "./sign-up/subscription";
+@use "./sign-up/confirmation";
+@use "./sign-up/buttons";

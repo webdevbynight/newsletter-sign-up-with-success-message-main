@@ -1,0 +1,42 @@
+@charset "utf-8";
+@use "../base/mixins" as *;
+
+/** @section Sign-up subscription */
+.sign-up.subscription {
+    padding-block-start: calc(284 / 375 * 100dvi + 4rem);
+    position: relative;
+    img {
+        width: 100dvi;
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline: 0;
+    }
+    @include css-media-queries($from-breakpoint: standalone-confirmation-card) {
+        --sign-up-padding: 6.4rem;
+    }
+    @include css-media-queries($from-breakpoint: two-column-card) {
+        --sign-up-padding: 2.4rem;
+        display: grid;
+        grid-template: repeat(4, 0fr) / 1fr 400px;
+        grid-template-areas: ". illustration" ". illustration" ". illustration" ". illustration";
+        column-gap: var(--sign-up-gap);
+        align-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        max-inline-size: 92.8rem;
+        min-block-size: calc(59.3rem + 2 * var(--sign-up-padding));
+        padding-block-start: var(--sign-up-padding);
+        padding-inline-start: var(--sign-up-gap);
+        margin-inline: auto;
+        picture {
+            grid-area: illustration;
+        }
+        img {
+            width: initial;
+            position: initial;
+        }
+    }
+    @include css-media-queries($from-breakpoint: standalone-subscription-card) {
+        border-radius: var(--sign-up-radius);
+    }
+}

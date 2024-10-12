@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+// Variables
+:root {
+    // Font and typo
+    --font: Roboto, sans-serif;
+    --sign-up-text-size: 1.6rem;
+    --sign-up-title-size: 4rem;
+    --sign-up-title-line-height: 1;
+    --sign-up-form-label-size: 1.2rem;
+
+    // Colours
+    --primary: white;
+    --secondary: #242742;
+    --tertiary: #ff6155;
+    --primary-background: #36384d;
+    --secondary-background: white;
+    --tertiary-background: #242742;
+    --tertiary-background-hover: linear-gradient(#ff6a3a, #ff527b);
+    --quaternary-background: rgb(25 24 43 / .25);
+    --quaternary-background-hover: #242742;
+    --quinary-background: #ff6155;
+    --senary-background: rgb(255 97 85 / .15);
+
+    // Margins, paddings, borders, gaps, boxes and shadows
+    --sign-up-padding: 4rem 2.4rem;
+    --sign-up-radius: 3.6rem;
+    --sign-up-gap: 6.4rem;
+    --sign-up-form-gap: .8rem;
+    --sign-up-field-radius: .8rem;
+    --sign-up-field-padding: 1.6rem 2.4rem;
+    --sign-up-field-block-size: 5.6rem;
+    --sign-up-button-radius: .8rem;
+    --sign-up-button-padding: 1.8rem 1.8rem 1.4rem;
+    --sign-up-button-block-size: 5.6rem;
+    --sign-up-button-shadow: rgb(255 97 85 / .5) 0 1.6rem 3.2rem;
+}
