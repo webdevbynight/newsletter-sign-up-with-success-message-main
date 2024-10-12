@@ -31,10 +31,13 @@
         margin-block-start: 4rem;
         p {
             display: flex;
-            flex-wrap: wrap;
             gap: var(--sign-up-form-gap);
             &:not(:first-child) {
                 margin-block-start: 2.4rem;
+            }
+            &:has(:not(:only-child)) {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
             }
         }
     }
@@ -45,6 +48,7 @@
         }
         &[type="email"] {
             color: inherit;
+            grid-column: 1 / -1;
             padding: var(--sign-up-field-padding);
             box-sizing: border-box;
             min-block-size: var(--sign-up-field-block-size);
@@ -68,12 +72,6 @@
     .invalidation-message {
         font-size: var(--sign-up-form-label-size);
         font-weight: bold;
-        inline-size: calc(50% - var(--sign-up-form-gap) / 2);
-    }
-    label {
-        &:has(+ :not(.invalidation-message)) {
-            flex-basis: 100%;
-        }
     }
     .title {
         font-size: var(--sign-up-title-size);
